@@ -23,9 +23,9 @@ public class Utility {
     public static boolean handleProvinceResponse(String response) {
         if (!TextUtils.isEmpty(response)) {
             try {
-                JSONArray allProvince = new JSONArray(response);
-                for (int i=0; i<allProvince.length(); i++) {
-                    JSONObject provinceObjict = allProvince.getJSONObject(i);
+                JSONArray allProvinces = new JSONArray(response);
+                for (int i=0; i<allProvinces.length(); i++) {
+                    JSONObject provinceObjict = allProvinces.getJSONObject(i);
                     Province province = new Province();
                     province.setProvinceName(provinceObjict.getString("name"));
                     province.setProvinceCode(provinceObjict.getInt("id"));
